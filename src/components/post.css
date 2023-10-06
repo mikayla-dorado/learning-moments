@@ -1,0 +1,44 @@
+.post-info{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 10%;
+    border: 1px dotted blue;
+    border-radius: 5px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    padding-left: 45%;
+}
+
+.posts{
+    justify-content: space-around;
+   
+}
+
+.all-posts{
+    text-align: center;
+    margin-top: 5%;
+}
+
+.filter-topic{
+    margin-bottom: 1%;
+}
+
+.all-topics{
+    margin-bottom: 1%;
+}
+
+.search-term{
+    margin-top: 1%;
+}
+
+.likes{
+    text-align: right;
+}
+
+.post-likes{
+    text-align: right;
+}
+
