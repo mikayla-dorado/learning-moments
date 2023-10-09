@@ -1,7 +1,7 @@
-import { getUserLikes } from "../services/getUserLikes"
+import { getUserLikes } from "../../services/getUserLikes"
 import { useEffect, useState } from "react"
 import "./post.css"
-
+import { Link } from "react-router-dom"
 
 export const Post = ({ post }) => {
     const [userLikes, setUserLikes] = useState([])
@@ -32,7 +32,7 @@ useEffect(() => {
                     </div>
                     <div className="post-title"> Title: </div>
                     <div>
-                        {post.title}
+                       <Link to={`/post/${post.id}`} > {post?.title}</Link>
                     </div>
                 </header>
                 <div className="userLikes">

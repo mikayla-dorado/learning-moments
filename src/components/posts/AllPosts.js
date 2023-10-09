@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import { getAllPosts } from "../services/getAllPosts"
+import { getAllPosts } from "../../services/getAllPosts"
 import { Post } from "./posts"
 import { FilterBar } from "./filterbar"
-import { getTopics } from "../services/getTopics"
+import { getTopics } from "../../services/getTopics"
 import "./post.css"
 
 
@@ -58,14 +58,6 @@ export const AllPosts = () => {
                         <Post post={postObj} key={postObj.id} />
                     )
                 })}
-            {/* <div className="posts">
-                <div>
-                {posts.map((postObj) => {
-                    return <Post post={postObj} key={postObj.id} />
-                })}
-                </div> */}
-            {/* </div> */}
-            
             </div>
         </div>
 
