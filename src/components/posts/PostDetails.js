@@ -2,7 +2,7 @@ import { useState } from "react"
 import "./post.css"
 import { useParams } from "react-router-dom"
 import { useEffect } from "react"
-import { getPostByUserId } from "../../services/getAllPosts"
+import { getPostById } from "../../services/getAllPosts"
 
 
 export const PostDetails = () => {
@@ -12,7 +12,7 @@ export const PostDetails = () => {
     //these useEffects are fetching and updating post likes and post data when the postId changes
 
     useEffect(() => {
-        getPostByUserId(postId).then((data) => {
+        getPostById(postId).then((data) => {
             console.log(data)
             console.log(postId)
             const postObj = data[0]
@@ -27,7 +27,6 @@ export const PostDetails = () => {
             <header className="details-title">
                 <div>
                     <span>Title: </span>
-                    
                     {post?.title}
                     
                 </div>
@@ -49,11 +48,11 @@ export const PostDetails = () => {
             </div>
             <div>
                 <span className="details-info">Author: </span>
-                {/* {post.user.fullName} */}
+                {post?.user?.fullName}
             </div>
-            <div>
+            {/* <div>
                 <span className="details-info">Likes: </span>
-            </div>
+            </div> */}
 
         </>
     )
@@ -62,3 +61,7 @@ export const PostDetails = () => {
 //after getting the above post info to display i need:
 //a like post button to display for user that is not the author of the post
 //an edit post button to display for user that is the author of the post
+
+
+//eventually after clicking like, app will navigate to the favorites view
+// eventually after clicking edit, app will navigate to Edit Post view
