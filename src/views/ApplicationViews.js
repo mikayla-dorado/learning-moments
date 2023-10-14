@@ -5,6 +5,7 @@ import { NavBar } from "../components/nav/NavBar"
 import { PostDetails } from "../components/posts/PostDetails"
 import { NewPost } from "../components/posts/NewPost"
 import { MyPosts } from "../components/posts/MyPosts"
+import { EditPost } from "../forms/EditPost"
 
 
 
@@ -36,10 +37,10 @@ export const ApplicationViews = () => {
                     <Route path=":postId" element={<PostDetails currentUser={currentUser} />} />
                 </Route>
                 <Route path="myposts" element={<MyPosts currentUser={currentUser} />} />
-
                 <Route path="newpost" element={<NewPost currentUser={currentUser} />} />
-
-
+                <Route path="editpost">
+                    <Route path=":postId" element={<EditPost currentUser={currentUser} />} />
+                </Route>
             </Route>
         </Routes>
     )

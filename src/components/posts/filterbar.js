@@ -4,9 +4,12 @@ export const FilterBar = ({ setSearchTerm, allTopics, setChosenTopic }) => {
     return (
                 <div className="filter-by-topic">
 
+                
                     <h2 className="filter-topic">Filter by topic:</h2>
+                    
 
                 {/* this select creates a dropwdown element */}
+                <div className="alltopics-dropdown w-24">
                     <select
                         name="topics"
                         id="topics"
@@ -34,13 +37,14 @@ export const FilterBar = ({ setSearchTerm, allTopics, setChosenTopic }) => {
                             return (<option value={topic.id} key={topic.id}>{topic.topic}</option>)
                         })}
                     </select>
+                    </div>
 
                         {/* this makes the search bar */}
                     <div className="search-term">
                         <input 
                             type="text"
                             placeholder="Search Posts"
-                            className="search-posts"
+                            className="search-posts "
                             onChange={(event) => {
                                 setSearchTerm(event.target.value)
                             }}

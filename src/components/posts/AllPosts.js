@@ -49,10 +49,10 @@ export const AllPosts = () => {
 
 
     return (
-        <div className="posts-container">
-            <h2 className="all-posts">All Posts</h2>
+        <div className="posts-container bg-green-50">
+            <h2 className="all-posts bg-green-50">All Posts</h2>
             <FilterBar allTopics={allTopics} setChosenTopic={setChosenTopic} setSearchTerm={setSearchTerm} />
-            <div className="posts">
+            <div className="posts bg-green-50">
                 {filteredPosts.map((postObj) => {
                     return (
                         <Post post={postObj} key={postObj.id} />

@@ -1,10 +1,10 @@
-.post-info{
-    display:flex;
+.post-info {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     margin-top: 10%;
-    border: 1px dotted blue;
+    /* border: 1px dotted blue; */
     border-radius: 5px;
     padding-top: 5%;
     padding-bottom: 5%;
@@ -12,33 +12,112 @@
     padding-left: 45%;
 }
 
-.posts{
+.posts {
     justify-content: space-around;
-   
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.all-posts{
+.all-posts {
     text-align: center;
     margin-top: 5%;
 }
 
-.filter-topic{
+.filter-topic {
     margin-bottom: 1%;
 }
 
-.all-topics{
+.all-topics {
     margin-bottom: 1%;
 }
 
-.search-term{
+.search-term {
     margin-top: 1%;
 }
 
-.likes{
+.likes {
     text-align: right;
 }
 
-.post-likes{
+.post-likes {
     text-align: right;
 }
 
+.search-posts {
+    border: solid rgba(27, 27, 27, 0.63);
+    border-radius: 3px;
+}
+
+.alltopics-dropdown {
+    border: solid rgba(27, 27, 27, 0.63);
+    border-radius: 3px;
+}
+
+.filter-by-topic-newpost {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
+}
+
+.button-savenewpost {
+    border: solid;
+}
+
+.myposts-header {
+    padding: 5%;
+}
+
+.mypost-delete-btn {
+    border: black;
+    margin-top:2%;
+}
+
+.editpost-btn {
+    border: black;
+}
+
+.like-btn {
+    border: black;
+}
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.myposts-container {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border:solid black;
+    border-radius: 1%;
+}
+
+.filter-by-topic-newpost {
+    border:solid black;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.select-topic {
+    margin-bottom: 2%;
+}
+
+.topic-select {
+    margin-bottom: 2%;
+}
+
+.newpost-title {
+    margin-bottom: 1%;
+}
+
+.change-title {
+    margin-bottom: 2%;
+}
+
+.newpost-body {
+    margin-bottom: 1%;
+}
+
+.button-savenewpost {
+    margin-top: 2%;
+}

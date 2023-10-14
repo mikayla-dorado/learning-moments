@@ -11,7 +11,7 @@ import { Link } from "react-router-dom"
 
 
 
-export const MyPosts = ({ currentUser}) => {
+export const MyPosts = ({ currentUser }) => {
     const userId = currentUser
     const [posts, setPosts] = useState([])
 
@@ -22,7 +22,7 @@ export const MyPosts = ({ currentUser}) => {
         })
     }, [])
 
-   
+
     const handleDelete = (postObj) => {
         deletePost(postObj)
     }
@@ -34,21 +34,24 @@ export const MyPosts = ({ currentUser}) => {
 
 
     return (
-        <div className="myposts-container">
-            <header>
-                <h2>My Posts</h2>
+        <div className="myposts-container min-h-screen bg-blue-300">
+            <header className="myposts-header text-center"> My Posts
             </header>
             <div>
                 {posts.filter((post) => post.userId === userId.id)
                     .map((post) => (
                         <div key={post.id}>
-                        <Link to={`/post/${post.id}`}> {post.title}</Link>
-                            <button className="mypost-delete-btn" onClick={() => { handleDelete(post)
-                                 refetchUserPosts()}}>Delete Post</button>
+                            <Link to={`/post/${post.id}`}> {post.title}</Link>
+                            <div>
+                                <button onClick={() => {
+                                    handleDelete(post)
+                                    refetchUserPosts()
+                                }} className="mypost-delete-btn border-double w-24">Delete Post</button>
+                            </div>
                         </div>
-                        
+
                     ))}
-                    
+
             </div>
         </div>
     )

@@ -61,14 +61,14 @@ export const NewPost = ({ currentUser }) => {
 
     return (
         //filter by topic so user can select for a new post
-        <div className="filter-by-topic-newpost">
-            <header>
+        <div className="filter-by-topic-newpost min-h-screen bg-orange-200">
+            <header className="text-center">
                 Create a New Post
             </header>
             <form onSubmit={handleSave}>
                 <h2 className="select-topic">Select Topic:</h2>
 
-                <select
+                <select className="topic-select"
                     name="topics"
                     id="topics"
                     onChange={(e) => setSelectedTopicId(e.target.value)}
@@ -84,7 +84,7 @@ export const NewPost = ({ currentUser }) => {
                 {/* user enters in a title for post */}
                 <div>
                     <h2 className="newpost-title">Title: </h2>
-                    <input
+                    <input className="change-title"
                         type="text"
                         id="title"
                         name="title"
@@ -111,7 +111,7 @@ export const NewPost = ({ currentUser }) => {
                     />
                 </div>
                 <div>
-                    <button className="button-savenewpost" type="save" onClick={handleSave}>
+                    <button className="button-savenewpost border-double w-24" type="save" onClick={handleSave}>
                         Create Post
                     </button>
                     {/* eventually app will navigate to MyPosts view after clicking Create Post */}

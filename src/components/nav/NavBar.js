@@ -6,7 +6,8 @@ export const NavBar = () => {
     const navigate = useNavigate
 
     return (
-        <ul className="navbar">
+        <ul className="navbar bg-gray-300
+        h-15">
             <li className="navbar-item">
                 <Link to="/">All Posts</Link>
             </li>

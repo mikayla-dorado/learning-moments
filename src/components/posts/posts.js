@@ -22,13 +22,15 @@ useEffect(() => {
 
     return (
         <div>
-            <div className="post-info">
+            <div className="post-info  bg-gray-400 ">
                 <header className="header">
                     <div className="topics">
                         <div className="post-topic"> Topic: </div>
-                        <div>
-                            {post.topic.topic}
                         </div>
+                        <div>
+                        
+                            {post.topic.topic}
+                        
                     </div>
                     <div className="post-title"> Title: </div>
                     <div>
